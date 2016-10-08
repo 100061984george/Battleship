@@ -1,0 +1,37 @@
+﻿<Properties StartupItem="Battleship\Battleship.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Battleship\MenuController.cs">
+    <Files>
+      <File FileName="Battleship\Ship.cs" Line="1" Column="1" />
+      <File FileName="Battleship\AttackResult.cs" Line="1" Column="1" />
+      <File FileName="Battleship\SeaGrid.cs" Line="1" Column="1" />
+      <File FileName="Battleship\UtilityFunctions.cs" Line="1" Column="1" />
+      <File FileName="Battleship\AlHardPlayer.cs" Line="1" Column="1" />
+      <File FileName="Battleship\BattleshipsGame.cs" Line="1" Column="1" />
+      <File FileName="Battleship\Tile.cs" Line="1" Column="1" />
+      <File FileName="Battleship\SeaGridAdapter.cs" Line="1" Column="1" />
+      <File FileName="Battleship\AIPlayer.cs" Line="1" Column="1" />
+      <File FileName="Battleship\Player.cs" Line="1" Column="1" />
+      <File FileName="Battleship\AlMediumPlayer.cs" Line="1" Column="1" />
+      <File FileName="Battleship\Direction.cs" Line="1" Column="1" />
+      <File FileName="Battleship\ISeaGrid.cs" Line="1" Column="1" />
+      <File FileName="Battleship\ResultOfAttack.cs" Line="1" Column="1" />
+      <File FileName="Battleship\ShipName.cs" Line="1" Column="1" />
+      <File FileName="Battleship\GameResources.cs" Line="1" Column="1" />
+      <File FileName="Battleship\HighScoreController.cs" Line="1" Column="1" />
+      <File FileName="Battleship\MenuController.cs" Line="215" Column="16" />
+      <File FileName="Battleship\GameState.cs" Line="1" Column="1" />
+      <File FileName="Battleship\GameLogic.cs" Line="1" Column="1" />
+      <File FileName="Battleship\AIOption.cs" Line="1" Column="1" />
+      <File FileName="Battleship\GameController.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" Line="1" Column="1" />
+      <File FileName="Battleship\DeploymentController.cs" Line="1" Column="1" />
+      <File FileName="Battleship\DiscoveryController.cs" Line="1" Column="1" />
+      <File FileName="Battleship\EndingGameController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
