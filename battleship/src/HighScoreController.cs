@@ -142,7 +142,19 @@ static class HighScoreController
 			}
 		}
 	}
-
+	/// <summary>
+	/// Gives users some instruction about the gameplay
+	/// </summary>
+	public static void DrawInstruction(){
+		SwinGame.DrawText ("Instruction",Color.AliceBlue,GameResources.GameFont("Courier"),2,30);
+		SwinGame.DrawText ("***********************************",Color.AliceBlue,GameResources.GameFont("Courier"),2,40);
+		SwinGame.DrawText ("1. Choose the option of the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,100);
+		SwinGame.DrawText ("2. Click the play button to start the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,130);
+		SwinGame.DrawText ("3. Arrange your ship before start the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,160);
+		SwinGame.DrawText ("4. Press the play button at the top of the right to start the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,190);
+		SwinGame.DrawText ("5. Press the column until you able defeat the enemy's ships",Color.AliceBlue,GameResources.GameFont("Courier"),2,220);
+	
+	}
 	/// <summary>
 	/// Handles the user input during the top score screen.
 	/// </summary>
