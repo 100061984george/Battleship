@@ -153,7 +153,10 @@ static class HighScoreController
 		SwinGame.DrawText ("3. Arrange your ship before start the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,160);
 		SwinGame.DrawText ("4. Press the play button at the top of the right to start the game",Color.AliceBlue,GameResources.GameFont("Courier"),2,190);
 		SwinGame.DrawText ("5. Press the column until you able defeat the enemy's ships",Color.AliceBlue,GameResources.GameFont("Courier"),2,220);
-	
+        SwinGame.DrawText ("6. Press m to mute", Color.AliceBlue, GameResources.GameFont("Courier"), 2, 250);
+        SwinGame.DrawText ("7. Press a to play music A", Color.AliceBlue, GameResources.GameFont("Courier"), 2, 280);
+        SwinGame.DrawText ("8. Press b to play music B", Color.AliceBlue, GameResources.GameFont("Courier"), 2, 310);
+        SwinGame.DrawText ("9. Press c to play music C", Color.AliceBlue, GameResources.GameFont("Courier"), 2, 340);
 	}
 	/// <summary>
 	/// Handles the user input during the top score screen.

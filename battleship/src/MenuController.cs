@@ -85,7 +85,7 @@ static class MenuController
 
 	private static readonly Color HIGHLIGHT_COLOR = SwinGame.RGBAColor(1, 57, 86, 255);
 
-	private static bool flag_mute = false;
+	private static bool flag_mute = true;
 	/// <summary>
 	/// Handles the processing of user input when the main menu is showing
 	/// </summary>
@@ -131,6 +131,45 @@ static class MenuController
 			GameController.EndCurrentState();
 			return true;
 		}
+
+        if (SwinGame.KeyTyped(KeyCode.vk_m))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            if (flag_mute == true)
+            {
+                Audio.StopMusic();
+                player.Stop();
+                flag_mute = false;
+            }
+        }
+        if (SwinGame.KeyTyped(KeyCode.vk_a))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+            flag_mute = true;
+        }
+
+        if (SwinGame.KeyTyped(KeyCode.vk_b))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            player.SoundLocation = "musicB.wav";
+            player.Play();
+            flag_mute = true;
+        }
+
+        if (SwinGame.KeyTyped(KeyCode.vk_c))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            player.SoundLocation = "musicC.wav";
+            player.Play();
+            flag_mute = true;
+        }
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			int i = 0;
@@ -277,6 +316,7 @@ static class MenuController
 	/// <param name="button">the button pressed</param>
 	private static void PerformMainMenuAction(int button)
 	{
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		switch (button) {
 			case MAIN_MENU_PLAY_BUTTON:
 				GameController.StartGame();
@@ -289,13 +329,16 @@ static class MenuController
 				break;
 			case MAIN_MENU_MUTE_BUTTON:
 			if (flag_mute == true)
-			{
-				Audio.StopMusic ();
+            {
+                player.Stop();
+                Audio.StopMusic();
 				flag_mute = false;
 				break;
 			}
 			else
-			{
+            {
+                player.Stop();
+                Audio.StopMusic();
 				SwinGame.PlayMusic (GameResources.GameMusic("Background"));
 				flag_mute = true;
 				break;
@@ -330,16 +373,20 @@ static class MenuController
 			case SETUP_MENU_HARD_BUTTON:
 				GameController.SetDifficulty(AIOption.Hard);
 				break;
-			case SETUP_MENU_MUSICA_BUTTON:
+            case SETUP_MENU_MUSICA_BUTTON:
+                Audio.StopMusic();
+                player.Stop();
 				SwinGame.PlayMusic (GameResources.GameMusic ("Background"));
 				break;
-			case SETUP_MENU_MUSICB_BUTTON:
-				Audio.StopMusic ();
+            case SETUP_MENU_MUSICB_BUTTON:
+                Audio.StopMusic();
+                player.Stop();
 				player.SoundLocation = "musicB.wav";
 				player.Play ();
 				break;
-			case SETUP_MENU_MUSICC_BUTTON:
-				Audio.StopMusic ();
+            case SETUP_MENU_MUSICC_BUTTON:
+                Audio.StopMusic();
+                player.Stop();
 				player.SoundLocation = "musicC.wav";
 				player.Play ();
 				break;
@@ -354,6 +401,7 @@ static class MenuController
 	/// <param name="button">the button pressed</param>
 	private static void PerformGameMenuAction(int button)
 	{
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 		switch (button) {
 			case GAME_MENU_RETURN_BUTTON:
 				GameController.EndCurrentState();
@@ -366,13 +414,16 @@ static class MenuController
 				break;
 			case GAME_MENU_MUTE_BUTTON:
 			if (flag_mute == false)
-			{
-				Audio.StopMusic ();
+            {
+                Audio.StopMusic();
+                player.Stop();
 				flag_mute = true;
 				break;
 			}
 			else
-			{
+            {
+                Audio.StopMusic();
+                player.Stop();
 				SwinGame.PlayMusic (GameResources.GameMusic("Background"));
 				flag_mute = false;
 				break;

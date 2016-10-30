@@ -12,7 +12,7 @@ using SwinGameSDK;
 /// </summary>
 static class DiscoveryController
 {
-
+    private static bool flag_mute = true;
 	/// <summary>
 	/// Handles input during the discovery phase of the game.
 	/// </summary>
@@ -25,6 +25,45 @@ static class DiscoveryController
 		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
+
+        if (SwinGame.KeyTyped(KeyCode.vk_m))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            if (flag_mute == true)
+            {
+                Audio.StopMusic();
+                player.Stop();
+                flag_mute = false;
+            }
+        }
+        if (SwinGame.KeyTyped(KeyCode.vk_a))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+            flag_mute = true;
+        }
+
+        if (SwinGame.KeyTyped(KeyCode.vk_b))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            player.SoundLocation = "musicB.wav";
+            player.Play();
+            flag_mute = true;
+        }
+
+        if (SwinGame.KeyTyped(KeyCode.vk_c))
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            Audio.StopMusic();
+            player.Stop();
+            player.SoundLocation = "musicC.wav";
+            player.Play();
+            flag_mute = true;
+        }
 
 		if (SwinGame.MouseClicked(MouseButton.LeftButton)) {
 			DoAttack();
