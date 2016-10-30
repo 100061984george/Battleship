@@ -428,6 +428,9 @@ static class MenuController
 				flag_mute = false;
 				break;
 			}
+		case GAME_MENU_INSTRUCTION_BUTTON:
+			GameController.AddNewState (GameState.Instruction);
+			break;
 			case GAME_MENU_QUIT_BUTTON:
 				GameController.AddNewState(GameState.Quitting);
 				break;
