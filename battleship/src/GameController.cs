@@ -70,6 +70,10 @@ public static class GameController
 	{
 		if (_theGame != null)
 			EndGame();
+		
+		//load and display the highest score when the game starts
+		HighScoreController.LoadScores ();
+		HighScoreController.DrawHighScores ();
 
 		//Create the game
 		_theGame = new BattleShipsGame();
